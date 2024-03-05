@@ -5,6 +5,7 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from 'react-router-dom';
+import logoEng from "/icon/en.png";
 
 import "./navbar.scss"
 
@@ -14,7 +15,7 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="left">
           <div className="item">
-            <img src="icon/en.png" alt="icon of current language" />
+            <img src={logoEng} alt="icon of current language" />
             <KeyboardArrowDownIcon/>
           </div>
           <div className="item">

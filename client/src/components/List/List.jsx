@@ -1,7 +1,8 @@
+import "./list.scss";
 import Card from "../Card/Card";
-import "./featuredProducts.scss";
 
-const FeaturedProducts = ({type}) => {
+const List = () => {
+
   const data = [
     {
       id: 1,
@@ -34,21 +35,12 @@ const FeaturedProducts = ({type}) => {
       price: 12
     }
   ]
+
   return (
-    <div className="featuredProducts">
-      <div className="top">
-        <h1>{type} products</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum cumque iure dolores illo vel facilis veritatis consectetur necessitatibus. Eligendi, possimus impedit et iusto perspiciatis similique labore illum aliquid vero alias!
-        </p>
-      </div>
-      <div className="bottom">
-        {data.map(item => (
-          <Card item={item} key={item.id}/>
-        ))}
-      </div>
-    </div>
+    <div className="list">{data?.map(item=>(
+      <Card item={item} key={item.id}/>
+    ))}</div>
   )
 }
 
-export default FeaturedProducts
+export default List;
