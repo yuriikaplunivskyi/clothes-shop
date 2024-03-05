@@ -1,7 +1,12 @@
 .slider {
   height: calc(100vh - 80px);
-  width: 100vw;
+  max-width: 1280px;
+  min-width: 100%;
+  overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .container {
     width: 300vw;

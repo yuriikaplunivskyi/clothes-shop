@@ -23,9 +23,9 @@ const Slider = () => {
   return (
     <div className='slider'>
       <div className="container" style={{transform: `translateX(-${currentSlide * 100}vw)`}}>
-        <img src={data[0]} alt="photo-slide" />
-        <img src={data[1]} alt="photo-slide" />
-        <img src={data[2]} alt="photo-slide" />
+        {data.map((image, index) => (
+          <img key={index} src={image} alt={`photo-slide-${index}`} />
+        ))}
       </div>
       <div className="icons">
         <div className="icon" onClick={prevSlide}>
