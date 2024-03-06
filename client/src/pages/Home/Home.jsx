@@ -7,13 +7,13 @@ import "./home.scss";
 const Home = () => {
 
   return (
-    <div className='home'>
+    <main className='home'>
       <Slider/>
       <FeaturedProducts type="featured"/>
       <Categories/>
       <FeaturedProducts type="trending"/>
       <Contact/>
-    </div>
+    </main>
   )
 }
 
