@@ -1,8 +1,10 @@
+import { useEffect, useState } from "react";
 import Card from "../Card/Card";
 import "./featuredProducts.scss";
+import axios from "axios";
 
 const FeaturedProducts = ({type}) => {
-  const data = [
+  const dataFake = [
     {
       id: 1,
       img: "https://golis.com.ua/wp-content/uploads/IMG_2850a-400x533.jpg",
@@ -34,6 +36,27 @@ const FeaturedProducts = ({type}) => {
       price: 12
     }
   ]
+
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          import.meta.env.VITE_API_URL +"/products?populate=*", {
+          headers: {
+            Authorization: "bearer " + import.meta.env.VITE_API_TOKEN,
+          }
+        });
+        setData(res.data.data);
+      } catch (err) {
+        console.log(err);
+        setData(dataFake);
+      }
+    };
+    fetchData();
+  },[])
+  console.log(data)
   return (
     <div className="featuredProducts">
       <div className="top">
