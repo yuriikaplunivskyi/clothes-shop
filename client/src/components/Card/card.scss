@@ -61,7 +61,7 @@
       font-size: 18px;
       font-weight: 400;
 
-      &:first-child {
+      &.salePrice{
         color: gray;
         text-decoration: line-through;
       }

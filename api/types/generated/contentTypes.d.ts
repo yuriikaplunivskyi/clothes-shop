@@ -860,10 +860,23 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'api::sub-category.sub-category'
     >;
     Color: Attribute.Enumeration<
-      ['White', 'Red', 'Yellow', 'Blue', 'Violet', 'Pink', 'Green']
+      [
+        'White',
+        'Red',
+        'Yellow',
+        'Blue',
+        'Violet',
+        'Pink',
+        'Green',
+        'Brown',
+        'Black',
+        'Grey'
+      ]
     >;
     Size: Attribute.Enumeration<['S', 'M', 'L', 'XL', 'XXL', 'XXXL']>;
     Material: Attribute.Enumeration<['cotton', 'silk', 'wilsoft', 'soft']>;
+    type: Attribute.Enumeration<['featured', 'trending']>;
+    salePrice: Attribute.Decimal;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

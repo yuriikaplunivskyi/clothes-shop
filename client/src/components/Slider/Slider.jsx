@@ -8,9 +8,9 @@ const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const data = [
-    "https://golis.com.ua/wp-content/uploads/IMG_7934-scaled.webp?id=10292",
-    "https://golis.com.ua/wp-content/uploads/IMG_9161-1000x1309.jpg",
-    "https://golis.com.ua/wp-content/uploads/IMG_9153-1000x1333.jpg",
+    "https://st.hzcdn.com/simgs/pictures/wine-cellars/wardrop-wirth-crawford-builders-img~1ce1be7901b8a97c_4-9263-1-13c6583.jpg",
+    "https://media.istockphoto.com/id/600100918/photo/kingdom-of-fashion.jpg?s=612x612&w=0&k=20&c=w7hr1Yd_I0yg6mvZWZRqQ7V4-VeFwvEUsofi1iKwI2Y=",
+    "https://www.kinowear.com/wp-content/uploads/2016/03/Wardrobe.jpg",
   ];
 
   const prevSlide = () => {

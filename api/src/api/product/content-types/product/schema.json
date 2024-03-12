@@ -71,7 +71,10 @@
         "Blue",
         "Violet",
         "Pink",
-        "Green"
+        "Green",
+        "Brown",
+        "Black",
+        "Grey"
       ]
     },
     "Size": {
@@ -93,6 +96,16 @@
         "wilsoft",
         "soft"
       ]
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "featured",
+        "trending"
+      ]
+    },
+    "salePrice": {
+      "type": "decimal"
     }
   }
 }
