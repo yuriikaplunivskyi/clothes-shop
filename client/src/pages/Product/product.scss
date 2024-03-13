@@ -39,9 +39,20 @@
     gap: 30px;
 
     .price {
-      font-style: 30px;
-      color: #2879fe;
-      font-weight: 500;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      h3 {
+        font-style: 30px;
+        color: #2879fe;
+        font-weight: 500;
+      }
+      & .salePrice{
+        font-size: 18px;
+        font-weight: 400;
+        color: gray;
+        text-decoration: line-through;
+      }
     }
 
     p {

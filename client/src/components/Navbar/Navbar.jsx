@@ -9,9 +9,10 @@ import logoEng from "/icon/en.png";
 
 import "./navbar.scss"
 import Cart from '../Cart/Cart';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
-
+  const products = useSelector( state => state.cart.products );
   const [open, setOpen] = useState(false);
 
   return (
@@ -60,7 +61,7 @@ const Navbar = () => {
             <FavoriteBorderIcon/>
             <div className="cartIcon" onClick={() => setOpen(!open)}>
               <ShoppingCartOutlinedIcon/>
-              <span>0</span>
+              <span>{products.length}</span>
             </div>
           </div>
         </div>

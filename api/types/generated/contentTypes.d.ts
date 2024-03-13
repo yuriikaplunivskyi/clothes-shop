@@ -877,6 +877,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     Material: Attribute.Enumeration<['cotton', 'silk', 'wilsoft', 'soft']>;
     type: Attribute.Enumeration<['featured', 'trending']>;
     salePrice: Attribute.Decimal;
+    vendor: Attribute.Enumeration<['Golis']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
